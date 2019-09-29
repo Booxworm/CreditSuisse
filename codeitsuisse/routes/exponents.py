@@ -13,7 +13,8 @@ def evaluateExponents():
     logging.info("data sent for evaluation {}".format(data))
     result = exponents(data.get("n"), data.get("p"))
     logging.info("My result :{}".format(result))
-    return json.dumps(result)
+
+    return { "result" : result }
 
 def counting_length(value_name):
     count = 0
