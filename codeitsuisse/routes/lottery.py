@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 def evaluateLottery():
     result = lottery()
     logging.info("My result :{}".format(result))
-    return json.dumps(result)
+    return jsonify(result)
 
 def lottery():
 
