@@ -5,7 +5,7 @@ app = Flask(__name__)
 import codeitsuisse.routes.square
 import codeitsuisse.routes.chessgame
 import codeitsuisse.routes.encryption
-import codeitsuisse.routes.exponents
+import codeitsuisse.routes.exponent
 import codeitsuisse.routes.lottery
 
 

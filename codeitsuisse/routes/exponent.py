@@ -7,8 +7,8 @@ from codeitsuisse import app
 
 logger = logging.getLogger(__name__)
 
-@app.route('/exponents', methods=['POST'])
-def evaluateExponents():
+@app.route('/exponent', methods=['POST'])
+def evaluateExponent():
     data = request.get_json()
     logging.info("data sent for evaluation {}".format(data))
     result = exponents(data.get("n"), data.get("p"))
