@@ -8,16 +8,17 @@ from codeitsuisse import app
 logger = logging.getLogger(__name__)
 
 @app.route('/chessgame', methods=['POST'])
-def evaluate():
+def evaluateChessGame():
     data = request.get_json()
     logging.info("data sent for evaluation {}".format(data))
     inputValue = data.get("input")
+    print(inputValue)
     result = chessGame(inputValue)
     logging.info("My result :{}".format(result))
     return json.dumps(result)
 
 def chessGame(board):
-    size = len(arr)
+    size = len(board)
 
     flag = False
     for i in range(size):
@@ -121,4 +122,3 @@ def chessGame(board):
         checkColumn -= 1
 
     return (verticalCount + horizontalCount + diagonalCount)
-
