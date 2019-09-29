@@ -7,7 +7,7 @@ from codeitsuisse import app
 
 logger = logging.getLogger(__name__)
 
-@app.route('/lottery', methods=['POST'])
+@app.route('/lottery', methods=['GET'])
 def evaluateLottery():
     result = lottery()
     logging.info("My result :{}".format(result))
