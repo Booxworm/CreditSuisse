@@ -24,7 +24,7 @@ def secretMessage(arr):
         encrypted = ""
         text = text.upper()
         for x in text:
-            if x >"A" and x < "Z":
+            if x >="A" and x <= "Z":
                 cleantext = cleantext + x
         if n == 0 or n == 1:
             result.append(cleantext)

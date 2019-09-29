@@ -11,10 +11,10 @@ logger = logging.getLogger(__name__)
 def evaluateExponent():
     data = request.get_json()
     logging.info("data sent for evaluation {}".format(data))
-    result = exponents(data.get("n"), data.get("p"))
+    result = { "result" : exponents(data.get("n"), data.get("p")) }
     logging.info("My result :{}".format(result))
 
-    return json.dumps({ "result" : result })
+    return json.dumps(result)
 
 def counting_length(value_name):
     count = 0
