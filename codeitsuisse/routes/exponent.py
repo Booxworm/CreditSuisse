@@ -14,7 +14,11 @@ def evaluateExponent():
     result = { "result" : exponents(data.get("n"), data.get("p")) }
     logging.info("My result :{}".format(result))
 
-    return json.dumps(result)
+    return app.response_class(
+            response=json.dumps(result),
+            status=200,
+            mimetype='application/json'
+        )
 
 def counting_length(value_name):
     count = 0
