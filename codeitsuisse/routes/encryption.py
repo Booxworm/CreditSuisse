@@ -19,16 +19,19 @@ def secretMessage(arr):
     result = []
     for item in arr:
         n = item.get("n")
-        text = item.get("text")
+        text = str(item.get("text"))
         cleantext = ""
         encrypted = ""
         text = text.upper()
         for x in text:
             if x >"A" and x < "Z":
                 cleantext = cleantext + x
-        for j in range(n):
-            for x in range(j, len(cleantext), n):
-                encrypted = encrypted + cleantext[x]
-        result.append(encrypted)
+        if n == 0 or n == 1:
+            result.append(cleantext)
+        else:
+            for j in range(n):
+                for x in range(j, len(cleantext), n):
+                    encrypted = encrypted + cleantext[x]
+            result.append(encrypted)
 
     return result
